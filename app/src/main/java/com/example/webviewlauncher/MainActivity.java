@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
             startActivity(intent);
             finish();
         } catch (Exception e) {
-            Toast.makeText(this, "未找到目标Activity，请确认已安装WebView DevUI", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "未找到目标Activity，你的系统可能未安装谷歌webview软件", Toast.LENGTH_LONG).show();
         }
     }
 }
