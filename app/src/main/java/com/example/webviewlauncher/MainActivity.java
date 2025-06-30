@@ -21,6 +21,8 @@ public class MainActivity extends Activity {
         try {
             startActivity(intent);
             finishAndRemoveTask();
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(0);
         } catch (Exception e) {
             Toast.makeText(this, "未找到目标Activity，你的系统可能未安装谷歌webview软件", Toast.LENGTH_LONG).show();
         }
