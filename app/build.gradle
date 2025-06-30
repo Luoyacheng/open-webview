@@ -1,7 +1,3 @@
-plugins {
-    id 'com.android.application'
-}
-
 android {
     namespace 'com.lyc.openwebview'
     compileSdk 34
@@ -14,8 +10,18 @@ android {
         versionName "beta"
     }
 
+    signingConfigs {
+        release {
+            storeFile file(".github/workflows/lyc_oneself.jks")
+            storePassword System.getenv("KEYSTORE_PASSWORD")
+            keyAlias System.getenv("KEY_ALIAS")
+            keyPassword System.getenv("KEY_PASSWORD")
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig signingConfigs.release // 关联 release 签名
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
