@@ -1,4 +1,4 @@
-package com.example.webviewlauncher;
+package com.lyc.openwebview;
 
 import android.app.Activity;
 import android.content.ComponentName;
