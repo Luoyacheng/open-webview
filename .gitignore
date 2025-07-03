@@ -1,3 +1,6 @@
+local.properties
 .gradle/
-.idea/
+.vscode/
 build/
+release/
+.idea/
